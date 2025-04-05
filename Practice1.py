@@ -17,5 +17,18 @@ def generate_number(n):
         number.append(i)
     return number
 
-n =int(input("输入一个整数"))
-print(generate_number(n))
+def filer_even_number(number):
+    even_number =[]
+    for num in number:
+        if num % 2 ==0:
+            even_number.append(num)
+    return even_number
+
+if __name__== "__main__":
+    n = int(input("请输入一个正整数："))
+    if n <= 0:
+        print("请输入大于0的整数")
+    else:
+        number = generate_number(n)
+        ber = filer_even_number(number)
+        print(f"输入列表为{number},\n偶数列表为{ber}")
